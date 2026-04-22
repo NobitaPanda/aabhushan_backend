@@ -96,6 +96,22 @@ const defaults = [
     stockStatus: 'Available',
     image: 'https://images.pexels.com/photos/12194298/pexels-photo-12194298.jpeg?auto=compress&cs=tinysrgb&w=1200',
     remarks: 'A flexible bracelet with a modern clasp, balanced between polish and comfort.'
+  },
+  {
+    productCode: 'AJ-B-452',
+    productName: 'Veda Bridal Kada',
+    category: 'Other',
+    purity: '22K',
+    grossWeight: 34,
+    netWeight: 34,
+    stoneWeight: 0,
+    wastage: 0,
+    makingCharge: 12500,
+    goldRate: 0,
+    price: 251000,
+    stockStatus: 'Available',
+    image: 'https://images.pexels.com/photos/20493840/pexels-photo-20493840.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    remarks: 'Heavy bridal kada finished with antique detailing and ceremonial grandeur.'
   }
 ];
 
