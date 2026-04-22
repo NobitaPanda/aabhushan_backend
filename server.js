@@ -5,6 +5,7 @@ const morgan = require('morgan');
 
 const connectDB = require('./backend/config/db');
 const seedDefaultUsers = require('./backend/utils/seedDefaultUsers');
+const seedDefaultProducts = require('./backend/utils/seedDefaultProducts');
 const { error } = require('./backend/utils/apiResponse');
 
 const app = express();
@@ -68,8 +69,11 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 connectDB()
-  .then(() => seedDefaultUsers())
-  .catch((err) => console.error('User seed error:', err.message));
+  .then(async () => {
+    await seedDefaultUsers();
+    await seedDefaultProducts();
+  })
+  .catch((err) => console.error('Startup seed error:', err.message));
 
 app.get('/', (req, res) => {
   res.json({
